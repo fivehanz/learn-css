@@ -155,8 +155,8 @@ selector {
 
 # css units
 
-[resource 1](https://www.raresportan.com/css-units/)
-[resource 2](https://every-layout.dev/rudiments/units/)
+- [resource 1](https://www.raresportan.com/css-units/)
+- [resource 2](https://every-layout.dev/rudiments/units/)
 
 # flexbox
 
@@ -164,13 +164,28 @@ selector {
 .container {
   display: flex;
 
-  flex: ;
-  flex-direction: ;
-  justify-content: ;
-  align-items: ;
+  /* flex-direction: row column row-reverse column-reverse; */
+  flex-direction: row;
+
+  /* wrap: wrap no-wrap; */
+  flex-wrap: wrap;
+
+  /* HORIZONTAL X-AXIS justify-content: space-around space-between flex-start flex-end center; */
+  justify-content: flex-start;
+
+  /* VERTICAL Y-AXIS align-items: space-around space-between stretch flex-start flex-end center baseline; */
+  align-items: space-around;
 }
 
 .item {
+  /* order: 0; */
+  order: 1;
+
+  /* flex: grow shrink basis; */
+  flex: 1 1 100px;
+
+  /* align-self: ...; OVERRIDES PARENT */
+  align-self: flex-start;
 }
 ```
 
@@ -216,5 +231,35 @@ selector {
 ```
 
 # transition property
+
+```css
+selector {
+  ...: ...;
+
+  /* transition: elements duration style delay; */
+  transition: all 300ms ease 0.3s;
+
+  /* browser support - chrome, safari - webkit */
+  -webkit-transition: ...;
+  /* moz firefox */
+  -moz-transition: ...;
+  /* opera */
+  -o-transition: ...;
+}
+
+selector:hover {
+  ...: ...;
+}
+```
+
+# transformation function
+
+```css
+selector {
+  ...: ...;
+
+  transform: ...;
+}
+```
 
 # animation
