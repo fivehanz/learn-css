@@ -263,3 +263,40 @@ selector {
 ```
 
 # animation
+
+```css
+@keyframes some-animation-name {
+  from {
+  }
+
+  to {
+  }
+
+  0% {
+  }
+
+  50% {
+  }
+
+  100% {
+  }
+}
+
+selector {
+  animation-name: some-animation-name;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+
+  /* shorthand */
+  animation: some-animation-name 4s linear 2s infinite normal;
+
+  /* cross browser */
+  -webkit-animation: some-animation-name 4s linear 2s infinite normal;
+  -moz-animation: some-animation-name 4s linear 2s infinite normal;
+  -ms-animation: some-animation-name 4s linear 2s infinite normal;
+  -o-animation: some-animation-name 4s linear 2s infinite normal;
+}
+```
